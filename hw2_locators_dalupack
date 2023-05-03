@@ -1,0 +1,16 @@
+"Amazon logo"
+driver.find_element(By.XPATH, "//i[@aria-label='Amazon']")
+"Continue button"
+driver.find_element(By.ID, 'continue' )
+"Need help link"
+driver.find_element(By.XPATH, "//span[@class='a-expander-prompt']")
+"Forgot your password link"
+NA
+"Other issues with sign in link"
+NA
+"Create your Amazon account link"
+driver.find_element(By.ID, 'createAccountSubmit' )
+"Conditions of use link"
+driver.find_element(By.XPATH, "//a[@href='/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=508088']")
+"Privacy notice link"
+driver.find_element(By.XPATH, "//a[@href='/gp/help/customer/display.html/ref=ap_signin_notification_privacy_notice?ie=UTF8&nodeId=468496']")

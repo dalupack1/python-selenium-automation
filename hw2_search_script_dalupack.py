@@ -13,21 +13,20 @@ driver = webdriver.Chrome(service=service)
 driver.maximize_window()
 
 # open the url
-driver.get('https://www.google.com/')
+driver.get('https://www.Amazon.com/')
 
-# populate search field
-search = driver.find_element(By.NAME, 'q')
-search.clear()
-search.send_keys('Table')
+driver.find_element(By.ID, 'nav-orders').click()
 
-# wait for 4 sec
+expected_result = "Sign in"
+actual_result = driver.find_element(By.XPATH, "//h1[@class='a-spacing-small']").text
+
+
+assert expected_result == actual_result, f"Test case failed"
+print("Test case passed")
+
+
+
 sleep(4)
 
-# click search button
-driver.find_element(By.NAME, 'btnK').click()
-
-# verify search results
-assert 'table' in driver.current_url.lower(), f"Expected query not in {driver.current_url.lower()}"
-print('Test Passed')
-
 driver.quit()
+
