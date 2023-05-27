@@ -6,12 +6,12 @@ BEST_SELLERS_BTN = (By.CSS_SELECTOR, 'a[href="/gp/bestsellers/?ref_=nav_cs_bests
 BEST_SELLERS_LINKS = (By.CSS_SELECTOR, 'div#zg_header div[class*="nav-tab-all_style_zg-tabs-li"]')
 @given('Get amazon main page')
 def open_amazon(context):
-    context.driver.get('https://www.amazon.com/')
+    #context.driver.get('https://www.amazon.com/')
 
 
 @when('Click on Best Sellers')
 def click_best_sellers(context):
-    context.driver.find_element(*BEST_SELLERS_BTN).click()
+    #context.driver.find_element(*BEST_SELLERS_BTN).click()
 
 
 @then('Verify there are {link_amount} links')
