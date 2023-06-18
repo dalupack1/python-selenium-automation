@@ -4,17 +4,15 @@ from time import sleep
 
 @given('Open amazon main page')
 def open_amazon(context):
-    context.driver.get('https://www.amazon.com/')
+    context.app.main_page.open_main_page()
 
 
 @when('Click orders')
 def click_orders(context):
-    context.driver.find_element(By.ID, 'nav-orders').click()
+    context.app.header.click_orders()
 
 
 @then('Verify sign in page opens')
 def verify_signin_opens(context):
-    expected_result = "Sign in"
-    actual_result = context.driver.find_element(By.XPATH, "//h1[@class='a-spacing-small']").text
-    assert expected_result == actual_result, f"Test case failed"
-    print("Test case passed")
+    context.app.search_results_hw.verify_signin_opens()
+
