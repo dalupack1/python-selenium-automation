@@ -3,6 +3,7 @@ from pages.base_page_ import Page
 
 class SearchResults(Page):
 
+    NEW_DEAL_LINK = (By.CSS_SELECTOR, "a[href*='/s?i=fashion-w']")
     SIGN_IN_PAGE = (By.XPATH, "//h1[@class='a-spacing-small']")
     ELECTRONICS_SUBMENU = (By.CSS_SELECTOR, "a[href*='/electronics-s']")
 
@@ -14,3 +15,7 @@ class SearchResults(Page):
 
     def verify_dept(self):
         self.wait_for_element_appear(*self.ELECTRONICS_SUBMENU)
+
+
+    def new_deal_link(self):
+        self.wait_for_element_appear(*self.NEW_DEAL_LINK)
