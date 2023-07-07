@@ -7,7 +7,7 @@ COLOR_OPTIONS = (By.CSS_SELECTOR, 'li[title]')
 CURRENT_COLOR = (By.CSS_SELECTOR, 'span.selection')
 
 
-@given('Open amazon product page')
+#@given('Open amazon product page')
 def open_amazon(context):
     context.driver.get('https://www.amazon.com/gp/product/B07BJKRR25/')
     sleep(3)

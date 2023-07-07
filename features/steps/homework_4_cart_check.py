@@ -10,7 +10,7 @@ CHECK_CART_BTN = (By.CSS_SELECTOR, 'span#nav-cart-count')
 ACTUAL_NAME = (By.CSS_SELECTOR, 'span[style*="height: 2.6"]' )
 
 
-@given('Get amazon main page')
+#@given('Open amazon main page')
 def open_amazon(context):
     context.driver.get('https://www.amazon.com/')
 
